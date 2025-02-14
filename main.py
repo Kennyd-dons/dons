@@ -4,37 +4,49 @@ from typing import List
 from groq import Groq
 import instructor
 
-
 class Character(BaseModel):
     name: str
     fact: List[str] = Field(..., description="A list of facts about the subject")
 
+def main():
+    # Initialize Groq client
+    client = Groq(
+        api_key=os.environ.get('GROQ_API_KEY'),
+    )
+    
+    # Enable instructor integration
+    client = instructor.from_groq(client, mode=instructor.Mode.TOOLS)
+    
+    print("Welcome to the Groq AI Chat! Type 'quit' to exit.")
+    
+    while True:
+        # Get user input
+        user_input = input("\nAsk me anything: ")
+        
+        # Check for quit command
+        if user_input.lower() == 'quit':
+            print("Goodbye!")
+            break
+        
+        try:
+            # Make API call
+            response = client.chat.completions.create(
+                model="mixtral-8x7b-32768",
+                messages=[
+                    {
+                        "role": "user",
+                        "content": user_input,
+                    }
+                ],
+                response_model=Character,
+            )
+            
+            # Print formatted response
+            print("\nResponse:")
+            print(response.model_dump_json(indent=2))
+            
+        except Exception as e:
+            print(f"An error occurred: {str(e)}")
 
-client = Groq(
-    api_key=os.environ.get('GROQ_API_KEY'),
-)
-
-client = instructor.from_groq(client, mode=instructor.Mode.TOOLS)
-
-resp = client.chat.completions.create(
-    model="mixtral-8x7b-32768",
-    messages=[
-        {
-            "role": "user",
-            "content": "Tell me about the company Tesla",
-        }
-    ],
-    response_model=Character,
-)
-print(resp.model_dump_json(indent=2))
-"""
-{
-  "name": "Tesla",
-  "fact": [
-    "electric vehicle manufacturer",
-    "solar panel producer",
-    "based in Palo Alto, California",
-    "founded in 2003 by Elon Musk"
-  ]
-}
-"""
+if __name__ == "__main__":
+    main()
