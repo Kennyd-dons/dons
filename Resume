@@ -2,92 +2,97 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CV Using HTML & CSS</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--========== BOX ICONS ==========-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!--========== CSS ==========-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Kenny DeCelle - Resume</title>
 </head>
 <body>
-   
-<div id="page">
-    <div class="photo-and-name">
-        <img src="profile.png" class="photo" alt="Profile Picture">
-        <div class="contact-info-box">
-            <h1 class="name">Kenny DeCelle</h1>
-            <br>
-            <h3 class="job-title">Full-Time College Scholar Athlete
-            </h3>
-            <p class="contact-details">Phone: (707) 628-6986 &nbsp; - &nbsp; 
-            Email: kenny.decelle@gmail.com</p>
-        </div>
-    </div>
-    <div id="objective">
-        <h3>Objective</h3>
-        <p>
-            My objective is to become a leader in healthcare
-            innovation within my community, creating residential care homes that embody
-            compassion and sustainability.
-        </p>
-    <div id="education">
-    <h3>Education</h3>
-    <table>
-        <tr class="school">
-            <td>2020 - 2021</td>
-            <td><b>Vacaville High School</b> – High School Diploma</td>
-        </tr>
-        <tr class="school">
-            <td>2021 - 2022</td>
-            <td><b>San Joaquin Delta College</b> – Associate of Arts, General Education</td>
-        </tr>
-        <tr class="school">
-            <td>2022 - 2024</td>
-            <td><b>Sonoma State University</b> – Bachelor of Arts, Psychology</td>
-        </tr>
-        <tr class="school">
-            <td>2024 - 2025</td>
-            <td><b>University of San Francisco</b> – Master of Science (MS), Entrepreneurship & Innovation</td>
-        </tr>
-    </table>
-<div id="work">
-    <h3>Experience</h3>
-    <table>
-        <tr class="work">
-            <td>May 2023 - Aug 2023</td>
-            <td><b>Walk of Life Residential Care</b> – Direct Support Provider</td>
-        </tr>
-        <tr class="work">
-            <td>Jan 2025 - Present</td>
-            <td><b>Newfi Lending</b> – Marketing Intern</td>
-        </tr>
-    </table>
-</div>
-    </div>
-    <div id="bio-data">
-        <h3>Bio-Data</h3>
-        <table>
-            <tr>
-                <td>Name:</td>
-                <td><b>Kenny DeCelle</b></td>
-            </tr>
-            <tr>
-                <td>Date of Birth:</td>
-                <td><b>27<sup>th</sup> July 2002</b></td>
-            </tr>
-            
-            <tr>
-                <td>Religion:</td>
-                <td><b>Christian</b></td>
-            </tr>
-            <tr>
-                <td>Nationality:</td>
-                <td><b>Filipino/American</b></td>
-            </tr>
-            <tr>
-                <td>Marital Status:</td>
-                <td><b>Unmarried</b></td>
-            </tr>
-        </table>
-    </div>
-</div>
+    <!--========== HEADER ==========-->
+    <header class="l-header" id="header">
+    </header>
 
+    <main class="l-main bd-container">
+        <div class="resume" id="area-cv">
+            <div class="resume__left">
+                <!--========== HOME ==========-->
+                <section class="home" id="home">
+                    <img src="profile.png" class="photo" alt="Profile Picture">
+                    <h1 class="name">Kenny DeCelle</h1>
+                    <h3 class="job-title">Full-Time College Scholar Athlete</h3>
+                    <p class="contact-details">Phone: (707) 628-6986 &nbsp; - &nbsp; Email: kenny.decelle@gmail.com</p>
+                </section>          
+                
+                <!--========== PROFILE ==========-->
+                <section class="profile section" id="profile">
+                    <h3>Objective</h3>
+                    <p>My objective is to become a leader in healthcare innovation within my community, creating residential care homes that embody compassion and sustainability.</p>
+                </section>
+                
+                <!--========== EDUCATION ==========-->
+                <section class="education section" id="education">
+                    <h3>Education</h3>
+                    <ul>
+                        <li><b>Vacaville High School</b> – High School Diploma (2020 - 2021)</li>
+                        <li><b>San Joaquin Delta College</b> – Associate of Arts, General Education (2021 - 2022)</li>
+                        <li><b>Sonoma State University</b> – Bachelor of Arts, Psychology (2022 - 2024)</li>
+                        <li><b>University of San Francisco</b> – Master of Science, Entrepreneurship & Innovation (2024 - 2025)</li>
+                    </ul>
+                </section>
+                
+                <!--========== SKILLS  ==========-->
+                <section class="skills section" id="skills">
+                    <h3>Skills</h3>
+                    <ul>
+                        <li>Marketing & Brand Strategy</li>
+                        <li>Social Media Engagement</li>
+                        <li>Data Analytics & GOST Analysis</li>
+                        <li>Content Creation & Outreach</li>
+                    </ul>
+                </section>
+            </div>
+
+            <div class="resume__right">
+                <!--========== EXPERIENCE ==========-->
+                <section class="experience section" id="experience">
+                    <h3>Experience</h3>
+                    <ul>
+                        <li><b>Walk of Life Residential Care</b> – Direct Support Provider (May 2023 - Aug 2023)</li>
+                        <li><b>Newfi Lending</b> – Marketing Intern (Jan 2025 - Present)</li>
+                    </ul>
+                </section>
+                
+                <!--========== LANGUAGES ==========-->
+                <section class="languages section">
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>English - Fluent</li>
+                        <li>Tagalog - Conversational</li>
+                    </ul>
+                </section>
+                
+                <!--========== BIO-DATA ==========-->
+                <section class="bio-data section">
+                    <h3>Bio-Data</h3>
+                    <ul>
+                        <li><b>Name:</b> Kenny DeCelle</li>
+                        <li><b>Date of Birth:</b> July 27, 2002</li>
+                        <li><b>Religion:</b> Christian</li>
+                        <li><b>Nationality:</b> Filipino/American</li>
+                        <li><b>Marital Status:</b> Unmarried</li>
+                    </ul>
+                </section>
+            </div>
+        </div>        
+    </main>
+
+    <!--========== HTML2PDF ==========-->
+    <script src="assets/js/html2pdf.bundle.min.js"></script>
+    <!--========== MAIN JS ==========-->
+    <script src="assets/js/main.js"></script>
 </body>
-</html>
